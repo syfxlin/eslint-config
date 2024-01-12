@@ -1,7 +1,7 @@
 {
   "name": "@syfxlin/eslint-config",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "Otstar's ESLint config",
   "author": "Otstar Lin <i@ixk.me> (https://github.com/syfxlin)",
   "license": "MIT",
