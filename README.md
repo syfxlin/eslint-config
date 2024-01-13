@@ -7,7 +7,7 @@ My ESLint configuration preset, modified based on @antfu/eslint-config.
 ### Install
 
 ```shell
-pnpm i -D eslint @antfu/eslint-config
+pnpm i -D eslint @syfxlin/eslint-config
 ```
 
 ### Create config file
