@@ -16,6 +16,7 @@ export default function config(options?: OptionsConfig & FlatConfigItem, ...conf
     rules: {
       "curly": ["error", "multi-line", "consistent"],
       "no-console": ["off"],
+      "style/quotes": ["error", "double", { avoidEscape: true, allowTemplateLiterals: true }],
       "style/brace-style": ["error", "1tbs"],
       "style/operator-linebreak": ["error", "after"],
       "style/jsx-one-expression-per-line": ["off"],
