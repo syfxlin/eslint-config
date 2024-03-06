@@ -22,20 +22,25 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
   },
-  "main": "index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "bunchee",
+    "dev": "bunchee --watch",
     "dev:viewer": "eslint-flat-config-viewer",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -44,18 +49,18 @@
     "eslint": ">=8.40.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.6.2",
-    "@unocss/eslint-plugin": "^0.58.3",
+    "@antfu/eslint-config": "^2.8.0",
+    "@unocss/eslint-plugin": "^0.58.5",
     "eslint-plugin-format": "^0.1.0",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-svelte": "^2.35.1",
     "svelte-eslint-parser": "^0.33.1"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-flat-config-viewer": "^0.1.8",
-    "tsup": "^8.0.1"
+    "bunchee": "^4.4.8",
+    "eslint": "^8.57.0",
+    "eslint-flat-config-viewer": "^0.1.11"
   }
 }
