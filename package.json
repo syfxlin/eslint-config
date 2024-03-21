@@ -59,7 +59,7 @@
     "svelte-eslint-parser": "^0.33.1"
   },
   "devDependencies": {
-    "bunchee": "^4.4.8",
+    "bunchee": "^5.0.0",
     "eslint": "^8.57.0",
     "eslint-flat-config-viewer": "^0.1.11"
   }
