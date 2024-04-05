@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^2.8.0",
-    "@unocss/eslint-plugin": "^0.58.5",
+    "@unocss/eslint-plugin": "^0.59.0",
     "eslint-plugin-format": "^0.1.0",
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
