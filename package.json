@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "bunchee": "^4.4.8",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "eslint-flat-config-viewer": "^0.1.11"
   }
 }
