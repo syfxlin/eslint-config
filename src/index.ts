@@ -1,6 +1,13 @@
-import antfu, { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from "@antfu/eslint-config";
+import antfu from "@antfu/eslint-config";
 
-export default function config(options?: OptionsConfig & FlatConfigItem, ...configs: Awaitable<UserConfigItem | UserConfigItem[]>[]): Promise<UserConfigItem[]> {
+type OptionsType<F> = F extends (a: infer A) => any ? A : never;
+type ConfigsType<F> = F extends (a: any, ...b: infer A) => any ? A : never;
+
+export type Options = OptionsType<typeof antfu>;
+export type Configs = ConfigsType<typeof antfu>;
+export type Returns = ReturnType<typeof antfu>;
+
+export default function config(options?: Options, ...configs: Configs): Returns {
   return antfu({
     ...options,
     formatters: true,
