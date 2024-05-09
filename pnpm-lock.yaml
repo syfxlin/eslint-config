@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@antfu/eslint-config':
     specifier: ^2.15.0
-    version: 2.15.0(@eslint-react/eslint-plugin@1.5.9)(@unocss/eslint-plugin@0.59.4)(@vue/compiler-sfc@3.4.25)(eslint-plugin-format@0.1.1)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.6)(eslint-plugin-svelte@2.38.0)(eslint@9.1.1)(svelte-eslint-parser@0.35.0)(typescript@5.4.5)
+    version: 2.15.0(@eslint-react/eslint-plugin@1.5.9)(@unocss/eslint-plugin@0.59.4)(@vue/compiler-sfc@3.4.25)(eslint-plugin-format@0.1.1)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.6)(eslint-plugin-svelte@2.38.0)(eslint@9.1.1)(svelte-eslint-parser@0.36.0)(typescript@5.4.5)
   '@eslint-react/eslint-plugin':
     specifier: ^1.5.9
     version: 1.5.9(@typescript-eslint/parser@7.7.1)(eslint@9.1.1)(typescript@5.4.5)
@@ -27,8 +27,8 @@ dependencies:
     specifier: ^2.38.0
     version: 2.38.0(eslint@9.1.1)
   svelte-eslint-parser:
-    specifier: ^0.35.0
-    version: 0.35.0
+    specifier: ^0.36.0
+    version: 0.36.0
 
 devDependencies:
   bunchee:
@@ -47,7 +47,7 @@ packages:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
     engines: {node: '>=0.10.0'}
 
-  /@antfu/eslint-config@2.15.0(@eslint-react/eslint-plugin@1.5.9)(@unocss/eslint-plugin@0.59.4)(@vue/compiler-sfc@3.4.25)(eslint-plugin-format@0.1.1)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.6)(eslint-plugin-svelte@2.38.0)(eslint@9.1.1)(svelte-eslint-parser@0.35.0)(typescript@5.4.5):
+  /@antfu/eslint-config@2.15.0(@eslint-react/eslint-plugin@1.5.9)(@unocss/eslint-plugin@0.59.4)(@vue/compiler-sfc@3.4.25)(eslint-plugin-format@0.1.1)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.6)(eslint-plugin-svelte@2.38.0)(eslint@9.1.1)(svelte-eslint-parser@0.36.0)(typescript@5.4.5):
     resolution: {integrity: sha512-qoqw+0N8bqz0vBIigGJamaIf1LdzXcmCDuleygJAF3EtACLieKyIMvpOdc2TU9AnuPbMBFCkN40340UWRChELw==}
     hasBin: true
     peerDependencies:
@@ -110,7 +110,7 @@ packages:
       eslint-plugin-markdown: 4.0.1(eslint@9.1.1)
       eslint-plugin-n: 17.3.0(eslint@9.1.1)
       eslint-plugin-no-only-tests: 3.1.0
-      eslint-plugin-perfectionist: 2.9.0(eslint@9.1.1)(svelte-eslint-parser@0.35.0)(typescript@5.4.5)(vue-eslint-parser@9.4.2)
+      eslint-plugin-perfectionist: 2.9.0(eslint@9.1.1)(svelte-eslint-parser@0.36.0)(typescript@5.4.5)(vue-eslint-parser@9.4.2)
       eslint-plugin-react-hooks: 4.6.0(eslint@9.1.1)
       eslint-plugin-react-refresh: 0.4.6(eslint@9.1.1)
       eslint-plugin-svelte: 2.38.0(eslint@9.1.1)
@@ -126,7 +126,7 @@ packages:
       local-pkg: 0.5.0
       parse-gitignore: 2.0.0
       picocolors: 1.0.0
-      svelte-eslint-parser: 0.35.0
+      svelte-eslint-parser: 0.36.0
       toml-eslint-parser: 0.9.3
       vue-eslint-parser: 9.4.2(eslint@9.1.1)
       yaml-eslint-parser: 1.2.2
@@ -1420,8 +1420,6 @@ packages:
     peerDependencies:
       typescript: ^4.1 || ^5.0
     peerDependenciesMeta:
-      '@swc/helpers':
-        optional: true
       typescript:
         optional: true
     dependencies:
@@ -1932,7 +1930,7 @@ packages:
     engines: {node: '>=5.0.0'}
     dev: false
 
-  /eslint-plugin-perfectionist@2.9.0(eslint@9.1.1)(svelte-eslint-parser@0.35.0)(typescript@5.4.5)(vue-eslint-parser@9.4.2):
+  /eslint-plugin-perfectionist@2.9.0(eslint@9.1.1)(svelte-eslint-parser@0.36.0)(typescript@5.4.5)(vue-eslint-parser@9.4.2):
     resolution: {integrity: sha512-ipFtDrqtF99qVVo+FE1fo6aHyLLp7hg6PNGfzY5KxQjcl0XCbyEFvjtR1NfkHDTN9rdFeEDxg59LLOv3VOAHAw==}
     peerDependencies:
       astro-eslint-parser: ^0.16.0
@@ -1954,7 +1952,7 @@ packages:
       eslint: 9.1.1
       minimatch: 9.0.4
       natural-compare-lite: 1.4.0
-      svelte-eslint-parser: 0.35.0
+      svelte-eslint-parser: 0.36.0
       vue-eslint-parser: 9.4.2(eslint@9.1.1)
     transitivePeerDependencies:
       - supports-color
@@ -2107,7 +2105,7 @@ packages:
       postcss-safe-parser: 6.0.0(postcss@8.4.38)
       postcss-selector-parser: 6.0.16
       semver: 7.6.0
-      svelte-eslint-parser: 0.35.0
+      svelte-eslint-parser: 0.36.0
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -2696,6 +2694,7 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    requiresBuild: true
 
   /js-yaml@4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
@@ -3478,11 +3477,11 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /svelte-eslint-parser@0.35.0:
-    resolution: {integrity: sha512-CtbPseajW0gjwEvHiuzYJkPDjAcHz2FaHt540j6RVYrZgnE6xWkzUBodQ4I3nV+G5AS0Svt8K6aIA/CIU9xT2Q==}
+  /svelte-eslint-parser@0.36.0:
+    resolution: {integrity: sha512-/6YmUSr0FAVxW8dXNdIMydBnddPMHzaHirAZ7RrT21XYdgGGZMh0LQG6CZsvAFS4r2Y4ItUuCQc8TQ3urB30mQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
-      svelte: ^3.37.0 || ^4.0.0 || ^5.0.0-next.112
+      svelte: ^3.37.0 || ^4.0.0 || ^5.0.0-next.115
     peerDependenciesMeta:
       svelte:
         optional: true
