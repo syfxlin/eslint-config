@@ -27,6 +27,7 @@ export default function config(options?: Options, ...configs: Configs): Returns 
       "style/brace-style": ["error", "1tbs"],
       "style/operator-linebreak": ["error", "after"],
       "style/jsx-one-expression-per-line": ["off"],
+      "style/multiline-ternary": ["error", "always-multiline", { ignoreJSX: true }],
       "style/member-delimiter-style": ["error", { multiline: { delimiter: "semi" }, singleline: { delimiter: "semi" } }],
       "ts/ban-ts-comment": ["off"],
       "ts/consistent-type-imports": ["off"],
