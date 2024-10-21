@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@antfu/eslint-config':
     specifier: 2.22.0-beta.1
-    version: 2.22.0-beta.1(@eslint-react/eslint-plugin@1.5.22)(@unocss/eslint-plugin@0.61.2)(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react-refresh@0.4.7)(eslint-plugin-svelte@2.41.0)(eslint@9.6.0)(svelte-eslint-parser@0.39.2)(typescript@5.5.3)
+    version: 2.22.0-beta.1(@eslint-react/eslint-plugin@1.5.22)(@unocss/eslint-plugin@0.61.2)(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react-refresh@0.4.7)(eslint-plugin-svelte@2.41.0)(eslint@9.6.0)(svelte-eslint-parser@0.43.0)(typescript@5.5.3)
   '@eslint-react/eslint-plugin':
     specifier: ^1.5.22
     version: 1.5.22(eslint@9.6.0)(typescript@5.5.3)
@@ -27,8 +27,8 @@ dependencies:
     specifier: ^2.41.0
     version: 2.41.0(eslint@9.6.0)
   svelte-eslint-parser:
-    specifier: ^0.39.2
-    version: 0.39.2
+    specifier: ^0.43.0
+    version: 0.43.0
 
 devDependencies:
   bunchee:
@@ -43,7 +43,7 @@ devDependencies:
 
 packages:
 
-  /@antfu/eslint-config@2.22.0-beta.1(@eslint-react/eslint-plugin@1.5.22)(@unocss/eslint-plugin@0.61.2)(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react-refresh@0.4.7)(eslint-plugin-svelte@2.41.0)(eslint@9.6.0)(svelte-eslint-parser@0.39.2)(typescript@5.5.3):
+  /@antfu/eslint-config@2.22.0-beta.1(@eslint-react/eslint-plugin@1.5.22)(@unocss/eslint-plugin@0.61.2)(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react-refresh@0.4.7)(eslint-plugin-svelte@2.41.0)(eslint@9.6.0)(svelte-eslint-parser@0.43.0)(typescript@5.5.3):
     resolution: {integrity: sha512-7H+UjGeXAo8N9eD60lw81fKTdC5HWZPFSGJ5MkBUIKu3Yrb71XGYiOJ1gx89ZFi5hvvlUiQOcbtf8G6nknmozw==}
     hasBin: true
     peerDependencies:
@@ -110,7 +110,7 @@ packages:
       eslint-plugin-markdown: 5.0.0(eslint@9.6.0)
       eslint-plugin-n: 17.9.0(eslint@9.6.0)
       eslint-plugin-no-only-tests: 3.1.0
-      eslint-plugin-perfectionist: 2.11.0(eslint@9.6.0)(svelte-eslint-parser@0.39.2)(typescript@5.5.3)(vue-eslint-parser@9.4.3)
+      eslint-plugin-perfectionist: 2.11.0(eslint@9.6.0)(svelte-eslint-parser@0.43.0)(typescript@5.5.3)(vue-eslint-parser@9.4.3)
       eslint-plugin-react-hooks: 4.6.2(eslint@9.6.0)
       eslint-plugin-react-refresh: 0.4.7(eslint@9.6.0)
       eslint-plugin-regexp: 2.6.0(eslint@9.6.0)
@@ -127,7 +127,7 @@ packages:
       local-pkg: 0.5.0
       parse-gitignore: 2.0.0
       picocolors: 1.0.1
-      svelte-eslint-parser: 0.39.2
+      svelte-eslint-parser: 0.43.0
       toml-eslint-parser: 0.10.0
       vue-eslint-parser: 9.4.3(eslint@9.6.0)
       yaml-eslint-parser: 1.2.3
@@ -1405,8 +1405,6 @@ packages:
     peerDependencies:
       typescript: ^4.1 || ^5.0
     peerDependenciesMeta:
-      '@swc/helpers':
-        optional: true
       typescript:
         optional: true
     dependencies:
@@ -1955,7 +1953,7 @@ packages:
     engines: {node: '>=5.0.0'}
     dev: false
 
-  /eslint-plugin-perfectionist@2.11.0(eslint@9.6.0)(svelte-eslint-parser@0.39.2)(typescript@5.5.3)(vue-eslint-parser@9.4.3):
+  /eslint-plugin-perfectionist@2.11.0(eslint@9.6.0)(svelte-eslint-parser@0.43.0)(typescript@5.5.3)(vue-eslint-parser@9.4.3):
     resolution: {integrity: sha512-XrtBtiu5rbQv88gl+1e2RQud9te9luYNvKIgM9emttQ2zutHPzY/AQUucwxscDKV4qlTkvLTxjOFvxqeDpPorw==}
     peerDependencies:
       astro-eslint-parser: ^1.0.2
@@ -1977,7 +1975,7 @@ packages:
       eslint: 9.6.0
       minimatch: 9.0.5
       natural-compare-lite: 1.4.0
-      svelte-eslint-parser: 0.39.2
+      svelte-eslint-parser: 0.43.0
       vue-eslint-parser: 9.4.3(eslint@9.6.0)
     transitivePeerDependencies:
       - supports-color
@@ -3606,6 +3604,22 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       svelte: ^3.37.0 || ^4.0.0 || ^5.0.0-next.115
+    peerDependenciesMeta:
+      svelte:
+        optional: true
+    dependencies:
+      eslint-scope: 7.2.2
+      eslint-visitor-keys: 3.4.3
+      espree: 9.6.1
+      postcss: 8.4.39
+      postcss-scss: 4.0.9(postcss@8.4.39)
+    dev: false
+
+  /svelte-eslint-parser@0.43.0:
+    resolution: {integrity: sha512-GpU52uPKKcVnh8tKN5P4UZpJ/fUDndmq7wfsvoVXsyP+aY0anol7Yqo01fyrlaWGMFfm4av5DyrjlaXdLRJvGA==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      svelte: ^3.37.0 || ^4.0.0 || ^5.0.0
     peerDependenciesMeta:
       svelte:
         optional: true
