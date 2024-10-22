@@ -10,6 +10,10 @@ export type Returns = ReturnType<typeof antfu>;
 export default function config(options?: Options, ...configs: Configs): Returns {
   return antfu({
     ...options,
+    jsx: true,
+    test: true,
+    react: true,
+    gitignore: true,
     formatters: true,
     typescript: true,
     stylistic: options?.stylistic === false
@@ -30,10 +34,12 @@ export default function config(options?: Options, ...configs: Configs): Returns 
       "style/multiline-ternary": ["error", "always-multiline", { ignoreJSX: true }],
       "style/member-delimiter-style": ["error", { multiline: { delimiter: "semi" }, singleline: { delimiter: "semi" } }],
       "ts/ban-ts-comment": ["off"],
+      "ts/no-empty-object-type": ["off"],
       "ts/consistent-type-imports": ["off"],
       "react/prop-types": ["off"],
       "react/display-name": ["off"],
       "react/no-unknown-property": ["off"],
+      "react-hooks/exhaustive-deps": ["off"],
       "react-refresh/only-export-components": ["off"],
       "unicorn/prefer-node-protocol": ["off"],
       "node/prefer-global/process": ["off"],
