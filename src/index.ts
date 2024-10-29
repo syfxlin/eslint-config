@@ -1,28 +1,29 @@
 import antfu from "@antfu/eslint-config";
+import tailwindcss from "eslint-plugin-tailwindcss";
 
 type OptionsType<F> = F extends (a: infer A) => any ? A : never;
 type ConfigsType<F> = F extends (a: any, ...b: infer A) => any ? A : never;
 
-export type Options = OptionsType<typeof antfu>;
+export type Options = OptionsType<typeof antfu> & { tailwindcss?: boolean };
 export type Configs = ConfigsType<typeof antfu>;
 export type Returns = ReturnType<typeof antfu>;
 
-export default function config(options?: Options, ...configs: Configs): Returns {
-  return antfu({
-    ...options,
+export default function config(_options?: Options, ..._configs: Configs): Returns {
+  const options: Options = {
+    ..._options,
     jsx: true,
     test: true,
     react: true,
     gitignore: true,
     formatters: true,
     typescript: true,
-    stylistic: options?.stylistic === false
+    stylistic: _options?.stylistic === false
       ? false
       : {
           quotes: "double",
           indent: 2,
           semi: true,
-          ...options?.stylistic === true ? {} : options?.stylistic,
+          ..._options?.stylistic === true ? {} : _options?.stylistic,
         },
     rules: {
       "curly": ["error", "multi-line", "consistent"],
@@ -43,7 +44,26 @@ export default function config(options?: Options, ...configs: Configs): Returns 
       "react-refresh/only-export-components": ["off"],
       "unicorn/prefer-node-protocol": ["off"],
       "node/prefer-global/process": ["off"],
-      ...options?.rules,
+      ..._options?.rules,
     },
-  }, ...configs);
+  };
+  const configs: Configs = [..._configs];
+  if (options.tailwindcss !== false) {
+    for (const config of tailwindcss.configs["flat/recommended"]) {
+      configs.unshift(config);
+    }
+    configs.push({
+      rules: {
+        "tailwindcss/classnames-order": "warn",
+        "tailwindcss/enforces-negative-arbitrary-values": "warn",
+        "tailwindcss/enforces-shorthand": "warn",
+        "tailwindcss/migration-from-tailwind-2": "warn",
+        "tailwindcss/no-arbitrary-value": "off",
+        "tailwindcss/no-custom-classname": "off",
+        "tailwindcss/no-contradicting-classname": "error",
+        "tailwindcss/no-unnecessary-arbitrary-value": "warn",
+      },
+    });
+  }
+  return antfu(options, ...configs);
 }
