@@ -5,6 +5,7 @@ export default config({
   typescript: true,
   stylistic: {
     quotes: "double",
+    allowTemplateLiterals: "always",
     indent: 2,
     semi: true,
   },
