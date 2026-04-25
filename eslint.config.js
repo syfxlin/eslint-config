@@ -1,6 +1,7 @@
 import config from "@antfu/eslint-config";
 
 export default config({
+  ignores: ["README.md"],
   formatters: true,
   typescript: true,
   stylistic: {
