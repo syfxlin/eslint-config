@@ -48,9 +48,8 @@ export default function config(_options?: Options, ..._configs: Configs): Return
     },
   };
   const configs: Configs = [..._configs];
-  if (options.tailwindcss !== false) {
-    for (const config of tailwindcss.configs["flat/recommended"]) {
-      // @ts-ignore
+  if (options.tailwindcss === true) {
+    for (const config of tailwindcss.configs.recommended) {
       configs.unshift(config);
     }
     configs.push({
